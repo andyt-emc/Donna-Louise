@@ -1,0 +1,92 @@
+
+.donate-btn(@img:'icon-heart.png', @backgroundCol:@purpleDark) {
+    padding-left: 4em;
+
+    background: url('../images/@{img}') @backgroundCol no-repeat;
+    background-position: 1em center;
+    background-size: 2em;
+    img {
+        display: inline-block;
+
+        width: auto;
+        max-height: 2.5em;
+        margin-right: .75em;
+    }
+}
+
+.highlight-text(@bg:@pink, @text-col:#fff) {
+    display: block;
+    font-weight: 700;
+
+    span {
+        padding: .125em;
+        color: @text-col;
+        background: @bg;
+        box-shadow: 6px 0 0 @bg, -6px 0 0 @bg;
+    }
+}
+
+.menu-angle {
+    position: absolute;
+    top: 1em;
+    right: 5%;
+
+    display: block;
+
+    font-family: 'FontAwesome';
+    font-size: 1.14em;
+
+    content: '\f107';
+
+    color: @pink;
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        display: table; /* 2 */
+        content: ' '; /* 1 */
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.grid-tile {
+    figure {
+        position: relative;
+        margin: 0;
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            color: #fff;
+            background: rgba(red(@purple), green(@purple), blue(@purple), 0.9);
+            transition: background .2s ease-in;
+
+            a {
+                display: block;
+                padding: .5em 0;
+                font-size: 0.925em;
+                line-height: 1.25em;
+                color: inherit;
+
+                @media screen and (min-width: 38.75em) {
+                    font-size: 1.25em;
+                }
+            }
+
+        }
+
+        &:hover {
+            figcaption {
+                background: rgba(red(@pink), green(@pink), blue(@pink), 0.9);
+            }
+        }
+    }/* figure */
+}
