@@ -323,7 +323,7 @@ form {
 
 @media screen and (min-width: 71.25em) {
     form {
-    	label,input,button,select, textarea {    		
+    	label,input,button,select, textarea {
             font-size: 1.25em;
         }
 
@@ -362,6 +362,31 @@ form.bfQuickMode {
 			font-size: 2em;
 		}
 	}
+
+	#bfElemWrap237 {
+		label.radio.inline {
+			float: left;
+			clear: left;
+			display: inline-block;
+			margin-bottom: 1em;
+			input {
+				float: right;
+				margin-left: 1em;
+				margin-top: .3em;
+			}
+		}
+	}
+
+	#bfElemWrap174,
+	#bfElemWrap175,
+	#bfElemWrap176,
+	#bfElemWrap177{
+		label.radio.inline {
+			margin-right: .75em;
+		}
+	}
+
+
 }
 
 .bfErrorMessage {
@@ -385,7 +410,7 @@ form.bfQuickMode {
 		float: left;
 		width: 100%;
 	}
-	
+
 	fieldset {
 		legend {
 			width: auto;
@@ -402,9 +427,10 @@ form.bfQuickMode {
 				margin-right: -40px !important;
 				font-size: 1.25em;
 			}
-			@media screen and (min-width: 71.25em) {				
+			@media screen and (min-width: 71.25em) {
 					font-size: 1.5em;
-				
+					margin-top: 0 !important;
+					margin-bottom: 0 !important;
 			}
 		}
 
@@ -433,7 +459,7 @@ form.bfQuickMode {
 		margin-bottom: 1.5em;
 
 		label.control-label {
-			width: 73% !important;			
+			width: 73% !important;
 			display: inline-block !important;
 			padding-right: 1em;
 		}
@@ -453,6 +479,7 @@ form.bfQuickMode {
 		.form-inline {
 			label.control-label {
 				width: 27% !important;
+				vertical-align: top;
 			}
 
 			 input[type="text"],
@@ -483,7 +510,7 @@ form.bfQuickMode {
 	}
 }
 
-			
+
 
 // Reusable Module Styles
 
@@ -1279,10 +1306,10 @@ form.bfQuickMode {
             margin-top: 0;
             padding-top: 10%;
         }
-    }	
+    }
 
     @media screen and (min-width: 71.25em) {
-    	.content-overlay { 
+    	.content-overlay {
     		h4 {
     			font-size: 1.25em;
     		}
@@ -1329,14 +1356,14 @@ form.bfQuickMode {
             max-width: 25em;
             margin: 0 auto 4% auto;
             .content-overlay {
-                
+
                 h4 {
                 }
                 p {
                 }
                 a {
                 }
-            }            
+            }
         }
     }
 
@@ -2352,7 +2379,7 @@ form.bfQuickMode {
             background-image: url('../images/FR_RegLogo_HR.png');
 
             html.svg & {
-				background-image: url('../images/FR_RegLogo_HR.png');            	
+				background-image: url('../images/FR_RegLogo_HR.png');
             }
         }
     }
@@ -2705,7 +2732,7 @@ form.bfQuickMode {
         width: 47%;
 
         text-align: right;
-        
+
     }
 
     &.text-top-left {
@@ -2761,7 +2788,7 @@ form.bfQuickMode {
 		    &:hover {
 		        background: darken(@purpleDark, 10%);
 		    }
-        }        
+        }
     }
 }
 
@@ -3662,9 +3689,9 @@ form.bfQuickMode {
 
 
 /*
- * ----------------------------------------------------------------- 
+ * -----------------------------------------------------------------
  * Our Organisation
- * ----------------------------------------------------------------- 
+ * -----------------------------------------------------------------
  */
 
  .organisation-section {
@@ -3683,7 +3710,7 @@ form.bfQuickMode {
 
  		@media screen and (max-width: 48.75em) {
 
- 			&:nth-child(even) { 			
+ 			&:nth-child(even) {
  				margin-right: 0;
  			}
 
@@ -4066,7 +4093,7 @@ ul.eb-event-info {
 				@media screen and (min-width: 71.25em)  {
 					font-size: 1.25em;
 				}
-			}		
+			}
 
 
 			&:last-child {
@@ -4447,7 +4474,7 @@ div.bfFormDiv {
 
 	@media screen and (min-width: 71.25em) {
 		.control-label {
-			width: 20%;			
+			width: 20%;
 		}
 
 		.controls {
@@ -4511,7 +4538,7 @@ body.make-a-donation {
 
             .select-container {
             	width: 9em;
-            	margin: 0 .5em;          	
+            	margin: 0 .5em;
             	display: inline-block;
             }
 
@@ -4521,7 +4548,7 @@ body.make-a-donation {
             	}
 
             	.select-container {
-            		padding-right: 60px;            		
+            		padding-right: 60px;
             		font-size: 1.5em;
             		&:after {
             			width: 60px;
@@ -4529,7 +4556,7 @@ body.make-a-donation {
             		}
             	}
 
-            	select {            		
+            	select {
             		height: 60px;
             	}
             }
@@ -4620,7 +4647,7 @@ body.make-a-donation {
                 .header .title {
                     background-color: rgba(230, 29, 126, 0.8);
                 }
-            }            
+            }
         }
         .custom-amount {
         	max-width: 1300px;
@@ -4679,7 +4706,7 @@ body.make-a-donation {
                 }
             }
             .button {
-                padding: 1.042em 2em;                
+                padding: 1.042em 2em;
                 vertical-align: bottom;
                 font-size: 12px;
                 font-weight: 300;
@@ -4758,7 +4785,7 @@ body.make-a-donation {
                 background-color: @purpleDark;
                 float: left;
                 width: 100%;
-                margin-right: 0;               
+                margin-right: 0;
     			margin-bottom: 1.5em;
                 overflow: hidden;
 
@@ -4892,7 +4919,7 @@ body.make-a-donation {
                     font-weight: 600;
                     color: #fff;
                     margin-bottom: 0.833em;
-                    
+
                 }
                 .item-text {
                     // font-size: 1.125em;
@@ -4913,13 +4940,13 @@ body.make-a-donation {
 
 	        		&:nth-child(even) {
 	        			margin-right: 0;
-	        		}    
+	        		}
 
 	        		&:nth-child(3) {
 	        			clear: left;
-	        		}    		
+	        		}
 	        	}
-	        }  
+	        }
 	        @media screen and (min-width: 41.25em) {
 	        	.flexbox & {
 	        		display: flex;
@@ -4940,9 +4967,9 @@ body.make-a-donation {
 
 	        		&:last-child {
 	        			margin-right: 0;
-	        		}    
+	        		}
 	        	}
-	        }            
+	        }
         }
     }
 }
@@ -5039,7 +5066,7 @@ body.donate {
                 margin-bottom: 5em;
                 label {
                     display: block;
-                    float: left;                    
+                    float: left;
                     text-align: center;
                     // padding-top: 0.3em;
                     font-size: 1.25em;
@@ -5047,7 +5074,7 @@ body.donate {
                     width: 49%;
                     margin-right: 2%;
                     margin-bottom: 2%;
-                    line-height: 2.9777em;                    
+                    line-height: 2.9777em;
                     background-color: #e8e8e8;
 
                     &:nth-child(even) {
@@ -5078,7 +5105,7 @@ body.donate {
                     	width: 5em;
                     	margin-right: 1em;
                     	display: inline-block;
-                    	float: none;                    	
+                    	float: none;
 
                     	&:nth-child(even) {
                     		margin-right: 1em;
@@ -5228,10 +5255,10 @@ body.donate {
 
             	.find-address {
             		position: absolute;
-            		top: 0;            		
+            		top: 0;
             		left: ~"calc(27% + 520px)";
             		text-transform: none;
-            		padding: 1.6em 2em;            		
+            		padding: 1.6em 2em;
             	}
             }
         }
@@ -5242,7 +5269,7 @@ body.donate {
             }
         }
         .control-group.gift-aid-title {
-            img {                
+            img {
                 width: 80%;
                 max-width: 300px;
             }
@@ -5310,7 +5337,7 @@ body.donate {
                 margin: 0 auto;
             }
         }
-        #field_join-email, #field_join-text, #field_join-post, #field_join-phone {            
+        #field_join-email, #field_join-text, #field_join-post, #field_join-phone {
             width: 100%;
             margin: 0 auto;
             text-align: center;
@@ -5369,7 +5396,7 @@ body.donate {
         }
 
         @media screen and (min-width: 42.25em) {
-        	
+
 			#field_join-email, #field_join-text, #field_join-post, #field_join-phone {
 				.control-label {
 					margin-right: 2em;
@@ -5379,13 +5406,13 @@ body.donate {
 				.controls ul li:first-child {
 					margin-right: 3.125em;
 				}
-			}       	
+			}
         }
 
         @media screen and (min-width: 71.25em) {
         	.control-label {
         		width: 27%;
-        		padding-right: 2%;       		
+        		padding-right: 2%;
 
         	}
 
@@ -5395,8 +5422,8 @@ body.donate {
         		input, textarea {
         			max-width: 25em;
         		}
-        	}  
-        }	
+        	}
+        }
     }
     .form-actions {
         border-bottom: 1px solid #e8e8e8;
@@ -5465,9 +5492,9 @@ body.donate {
 }
 
 /*
- * ----------------------------------------------------------------- 
+ * -----------------------------------------------------------------
  * Search
- * ----------------------------------------------------------------- 
+ * -----------------------------------------------------------------
  */
 
 
@@ -5551,7 +5578,7 @@ body.donate {
 span.highlight {
 	padding: 1px 2px;
 	color: @purple;
-	background-color: @yellow;	
+	background-color: @yellow;
 }
 
 
@@ -5562,11 +5589,10 @@ span.highlight {
 		width: 48%;
 		margin-right: 4%;
 		float: left;
-		margin-bottom: 2em;		
+		margin-bottom: 2em;
 
 		&:nth-of-type(even) {
 			margin-right: 0;
 		}
 	}
 }
-
