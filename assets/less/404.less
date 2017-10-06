@@ -14,7 +14,7 @@
 // -----------------------------------------------------------------------------
 
 // Banner (404 header + image)
-@headerBGImage: url(../images/404/404-background.png);
+@headerBGImage: url(../images/404/404-background.jpg);
 @headerColor: #fff;
 @headerColorNoImage: #dedede;
 @headerFontSize: 16.875em;
@@ -28,7 +28,7 @@
 // -----------------------------------------------------------------------------
 
 // 'Whoops!' text
-@whoopsColor: blue;
+@whoopsColor: @linkCol;
 @whoopsSize: 2.250em;       // 36px
 @whoopsLineHeight: 1.111em; // 40px
 
@@ -63,18 +63,35 @@
 // Template
 // -----------------------------------------------------------------------------
 
-html.error-404 {
-    #mainWrap .zen-row {
+body.error-404 {
+    #mainwrap .zen-row {
         margin: 0;
     }
-    .zen-container {
-        width: 100%;
-        max-width: none;
+
+    #mainwrap {
+      .internal-container {
+          width: 100%;
+          max-width: none;
+          padding-top: 0;
+      }
+      .article-body {
+          position: relative;
+          .selectLayout;
+      }
     }
-    .article-content {
-        position: relative;
-        .selectLayout;
+
+    @media screen and (min-width: 1024px) {
+        #mainwrap #main {
+            width: 100%;
+        }
     }
+
+    @media screen and (min-width: 1400px) {
+        #mainwrap #main {
+            width: 100%;
+        }
+    }
+
 }
 
 // Layouts
@@ -161,15 +178,21 @@ html.error-404 {
         ul.options {
             list-style-type: none;
             padding-top: 1em;
+            padding-left: 0;
             margin-left: 0;
+            text-align: center;
             li {
-                display: block;
+                text-align: center;
                 margin: 0.5em 0;
                 a {
                     font-size: @buttonSize;
                     line-height: @buttonLineHeight;
                     font-weight: bold;
                     .defaultButtonStyles;
+                }
+
+                @media screen and (min-width: 510px) {
+                    display: inline-block;
                 }
             }
             @media screen and (min-width: @breakPointTwo) {
