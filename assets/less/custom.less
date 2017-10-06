@@ -1281,7 +1281,7 @@ form.bfQuickMode {
         background: rgba(red(@purple), green(@purple), blue(@purple), .9);
         transition: all .4s cubic-bezier(.68, -.25, .265, 1.25);
 
-        h4 {
+        h3, h4 {
             overflow: hidden;
             margin-top: 0;
             font-size: 1.125em;
@@ -2233,8 +2233,8 @@ form.bfQuickMode {
         width: 18%;
         &:nth-child(6) {
             position: absolute;
-            right: 25%;
-            bottom: 0;
+            right: 26%;
+            bottom: -34px;
             ul li:last-child {
                 #bottom1 & {
                     margin-bottom: 0;
@@ -2724,7 +2724,7 @@ form.bfQuickMode {
 
 .promotion-tile {
     position: relative;
-    aside {
+    div.overlay {
         position: absolute;
         right: 5%;
         bottom: 6%;
@@ -2736,7 +2736,7 @@ form.bfQuickMode {
     }
 
     &.text-top-left {
-    	aside {
+    	div.overlay {
     		width: 65%;
     		top: 7%;
     		left: 7%;
@@ -2757,7 +2757,7 @@ form.bfQuickMode {
     }
 
     &.sonottrue {
-    	aside {
+    	div.overlay{
     		height: 86%;
 
     		a.btn {

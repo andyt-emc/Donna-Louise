@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
 	 */
 
 	// jQuery('img').each(function() {
-	// 	console.log(jQuery(this).attr('alt'));
+	// 	console.log(jQuery(this).attr('src'), jQuery(this).attr('alt'));
 	// });
 
 	// swap inline png for SVG graphics// SVG / PNG
