@@ -341,11 +341,12 @@ jQuery(document).ready(function() {
 									}
 								});
 								// elminate duplicate locality/town
-								city = ( locality == town ? town : locality + ', ' + town) + ', ' + county;
+								city = ( locality == town ? town : locality + ', ' + town);
 								// address updates
 								jQuery('#address').val(street);
 								jQuery('#city').val(city);
 								jQuery('#zip').val(postcode);
+								jQuery('#county').val(county);
 								jQuery('#country').val(country).change();
 								// layout updates
 								jQuery('.find-address').hide()
