@@ -178,7 +178,7 @@ jQuery(document).ready(function() {
 		// watch for change in payment type
 		jQuery('.donate-type').change(function(){
 			var option = jQuery('.donate-type :selected').val();
-			var imagePath = "/~dlt/latest/images/donate/";
+			var imagePath = "/images/donate/";  
 			switch(option) {
 				case 'one-time':
 					amount1 = 20;
