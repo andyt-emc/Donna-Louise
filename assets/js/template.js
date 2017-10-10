@@ -35,9 +35,9 @@ jQuery(document).ready(function() {
 	}
 
 	/*
-	 * ----------------------------------------------------------------- 
+	 * -----------------------------------------------------------------
 	 * Make date dynamic
-	 * ----------------------------------------------------------------- 
+	 * -----------------------------------------------------------------
 	 */
 
 	 var d = new Date().getFullYear();
@@ -188,7 +188,7 @@ jQuery(document).ready(function() {
 					desc1 	= "Your gift could bring music and laughter to one of our children.";
 					desc2 	= "Your gift could help our families express themselves when there are no words.";
 					desc3 	= "Your donation could help parents learn how to have fun and interact with their child.";
-					desc4 	= "Your donation could allow siblings to be around people who ‘get it’ at a sibling sleepover.";					
+					desc4 	= "Your donation could allow siblings to be around people who ‘get it’ at a sibling sleepover.";
 					img1	= imagePath+"donate-once-"+amount1+".jpg";
 					img2	= imagePath+"donate-once-"+amount2+".jpg";
 					img3	= imagePath+"donate-once-"+amount3+".jpg";
@@ -199,7 +199,7 @@ jQuery(document).ready(function() {
 					amount1 = 5;
 					amount2 = 10;
 					amount3 = 25;
-					amount4 = 50;					
+					amount4 = 50;
 					desc1 	= "Could allow a family to come together over one of our home-made cakes and a cup of tea.";
 					desc2 	= "Could lighten the load for families by covering the cost of two volunteers to help around the home.";
 					desc3 	= "Could help ensure that our skilled play team are always on hand to make the magic happen.";
@@ -308,9 +308,30 @@ jQuery(document).ready(function() {
 			jQuery('.address-group').show();
 		});
 
+		// ie9 fix
+		var browser = {
+        isIe: function () {
+            return navigator.appVersion.indexOf("MSIE") != -1;
+        },
+        navigator: navigator.appVersion,
+        getVersion: function() {
+            var version = 999; // we assume a sane browser
+            if (navigator.appVersion.indexOf("MSIE") != -1)
+                // bah, IE again, lets downgrade version number
+                version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+            return version;
+        }
+    };
+
+			if (browser.isIe() && browser.getVersion() <= 9) {
+				jQuery('.find-address').hide();
+				jQuery('.address-group').show();
+			}
+
 		// check for address request button click
-		jQuery('.find-address').click(function() {
+		jQuery('.find-address').on('click', function() {
 			// Get Postcode and house number from form
+			console.log('Dave');
 			var number   = jQuery('#house_id').val();
 			var postcode = jQuery('#postcode').val().toUpperCase();
 			if (number.length == 0 || postcode.length == 0) {

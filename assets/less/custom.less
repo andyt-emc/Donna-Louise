@@ -486,6 +486,9 @@ form.bfQuickMode {
 			 textarea {
 			 	max-width: 25em;
 			 }
+			 textarea {
+				 padding-left: .8em;
+			 }
 		}
 	}
 }
@@ -592,6 +595,7 @@ form.bfQuickMode {
 
 .article-grid.moduletable {
 	margin: 5% 0;
+    clear: left;
 
 	ul {
 		margin: 0;
@@ -725,9 +729,13 @@ form.bfQuickMode {
 
 @media screen and (min-width: 77.5em) {
 	.article-grid.moduletable {
+        margin: 0; /* IE FIX */
+        padding-top: 5%; /* IE FIX */
 		.article-tile, li {
 			&.testimonial {
 				p.testimonial {
+                    margin-top: 1.25em; /* IE FIX */
+                    max-width: 275px; /* IE FIX */
 					font-size: 1em;
 				}
 			}
@@ -1029,6 +1037,7 @@ form.bfQuickMode {
 
 #grid2wrap {
     background: url('../images/child-in-ball-pit-500.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .moduletable.join-newsletter {
@@ -1261,6 +1270,7 @@ form.bfQuickMode {
 
 			p {
 				font-size: 1.25em;
+                max-width: 216px; /* IE FIX */
 			}
 		}
 	}
@@ -1595,9 +1605,9 @@ form.bfQuickMode {
                 color: #fff;
             }
 
-            span {
-            	opacity: 0.8;
-            }
+            // span {
+            // 	opacity: 0.8;
+            // }
             &:hover {
                 > a {
                     color: @pink;
@@ -1642,11 +1652,13 @@ form.bfQuickMode {
 
             li {
             	text-align: center;
+							vertical-align: top;
             	font-size: 1em;
 
                 a, span {
                     padding: .5em 2em;
                     font-size: .625em;
+										cursor: pointer;
                 }
 
                 span {
@@ -1792,6 +1804,12 @@ form.bfQuickMode {
 }
 
 @media screen and (min-width: 1140px) {
+    #navwrp {
+        .internal-container {
+            position: relative;
+            min-height: 85px;
+        }/* IE FIX */
+    }
     #logo {
         float: left;
 
@@ -1821,6 +1839,7 @@ form.bfQuickMode {
         transform: translateY(-50%);
         input {
             font-size: .625em;
+            margin-bottom: 0;
         }
     }
     #navwrap {
@@ -1829,6 +1848,7 @@ form.bfQuickMode {
         #menu {
             position: absolute;
             top: 0;
+						left: 0;
             ul.nav {
                 > li {
                     &:nth-of-type(4) {
@@ -1849,6 +1869,11 @@ form.bfQuickMode {
 @media screen and (min-width: 1360px) {
     #navwrap {
         height: 6.3125em;
+
+        .internal-container {
+            min-height: 105px;
+        }/* IE FIX */
+
         #menu {
             ul {
                 li {
@@ -1877,6 +1902,10 @@ form.bfQuickMode {
 @media screen and (min-width: 1680px) {
     #navwrap {
         height: 7.375em;
+
+        .internal-container {
+            min-height: 125px;
+        } /* IE FIX */
         #menu {
             ul {
                 li {
@@ -2782,6 +2811,8 @@ form.bfQuickMode {
             font-weight: 600;
 
             color: #fff;
+
+						width: 100%;
         }
         a.btn {
         	color: #fff;
@@ -4966,6 +4997,10 @@ body.make-a-donation {
 	        		width: 31%;
 	        		margin-right: 3.5%;
 
+                    .item-text {
+                        max-width: 275px;
+                    } /* IE FIX */
+
 	        		&:last-child {
 	        			margin-right: 0;
 	        		}
@@ -5187,11 +5222,19 @@ body.donate {
             width: 100%;
             display: inline-block;
             vertical-align: top;
+						.input-small {
+							padding-top: 0 !important;
+							padding-bottom: 0 !important;
+							padding: 0 !important;
+							min-height: 50px;
+						}
             input, textarea {
                 padding: 1em 0;
+
                 width: 100%;
                 max-width: none;
                 text-indent: 1.25em;
+								border: none !important;
             }
             textarea {
                 height: 12em;
